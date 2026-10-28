@@ -1,6 +1,8 @@
--- Gestão de Cardápio - Cafeteria (CRUD PHP + MySQLi)
+# Gestão de Cardápio - Cafeteria (CRUD PHP + MySQLi)
 
--- Como rodar
+Alunos: Jenézio Santos e Gabriel Alves Coutinho
+
+## Como rodar
 1. Coloque a pasta em `htdocs` (XAMPP) e inicie Apache e MySQL.
 2. No phpMyAdmin, importe o arquivo `banco.sql`.
 3. Ajuste usuário/senha do MySQL em `config.php`, se necessário.
@@ -8,7 +10,7 @@
 
 **Login padrão:** usuário `admin` / senha `admin123`
 
--- Arquivos
+## Arquivos
 - `login.php` / `logout.php`: autenticação
 - `verifica_login.php`: bloqueia páginas para quem não está logado
 - `painel.php`: cadastro (Create) e listagem (Read)
