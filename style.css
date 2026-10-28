@@ -1,0 +1,98 @@
+/* Visual de cafeteria: marrom, creme e espresso (sobrescreve o Bootstrap 3) */
+:root {
+    --creme: #f3ebdf;
+    --papel: #fffdf9;
+    --espresso: #3a2418;
+    --cafe: #7b4a1e;
+    --cafe-claro: #c68b4e;
+    --linha: #bfa88c;
+    --texto: #3a2418;
+    --suave: #7d6a58;
+}
+
+html { background: var(--creme); }
+
+body {
+    background: var(--creme);
+    color: var(--texto);
+    font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-size: 14px;
+    padding: 32px 16px 40px;
+}
+
+/* barra de topo, só com CSS (sem mexer no PHP) */
+body::before {
+    content: "Cafeteria  |  Gestão do Cardápio";
+    display: block;
+    background: var(--espresso);
+    color: #f1dfc6;
+    border-bottom: 4px solid var(--cafe);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 14px 26px 12px 20px;
+    margin: -32px -16px 30px;
+}
+
+.wrapper {
+    background: var(--papel);
+    border: 2px solid var(--espresso);
+    box-shadow: 5px 5px 0 var(--linha);
+    padding: 22px 30px 26px 24px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+.wrapper .container-fluid { padding: 0; }
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; color: var(--cafe); font-weight: bold; }
+h3 { font-size: 19px; margin-top: 6px; }
+.page-header { border-bottom: 2px dotted var(--cafe-claro); margin: 0 0 20px; padding-bottom: 10px; }
+.page-header h1, .page-header h2 { margin: 0; }
+hr { border-top: 2px dotted var(--linha); }
+a { color: var(--cafe); text-decoration: underline; }
+a:hover { color: var(--espresso); }
+
+/* formulários */
+label { font-weight: bold; color: var(--espresso); }
+.form-control {
+    border: 2px solid var(--linha);
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    color: var(--texto);
+}
+.form-control:focus { border-color: var(--cafe); box-shadow: none; }
+.help-block { font-size: 12px; }
+
+/* botões */
+.btn { border-radius: 0; border-width: 2px; box-shadow: none; font-weight: bold; }
+.btn-primary { background: var(--cafe); border-color: var(--espresso); color: #fff; }
+.btn-primary:hover, .btn-primary:focus { background: var(--espresso); border-color: var(--espresso); color: #fff; }
+.btn-default { background: #fff; border-color: var(--linha); color: var(--espresso); }
+.btn-default:hover { background: var(--creme); border-color: var(--cafe); }
+.btn-warning { background: #f0d9a8; border-color: #a9782b; color: #5a3d0f; }
+.btn-warning:hover, .btn-warning:focus { background: #e6c88a; border-color: #8a5f1d; color: #3f2a08; }
+.btn-danger { background: #e9c3b8; border-color: #9b3b33; color: #7a2820; }
+.btn-danger:hover, .btn-danger:focus { background: #dfa99b; border-color: #7a2820; color: #5c1c16; }
+.alert .btn-danger { background: #9b3b33; border-color: #5c1c16; color: #fff; }
+.alert .btn-danger:hover { background: #7a2820; color: #fff; }
+
+/* tabela */
+.table { margin-bottom: 0; background: #fff; }
+.table-bordered, .table-bordered > thead > tr > th, .table-bordered > tbody > tr > td,
+.table-bordered > thead > tr > td { border: 1px solid var(--linha); }
+.table > thead > tr > th {
+    background: var(--cafe);
+    color: #fbefd9;
+    border-color: var(--espresso);
+    border-bottom: 2px solid var(--espresso);
+}
+.table > tbody > tr > td { vertical-align: middle; }
+.table-striped > tbody > tr:nth-of-type(odd) { background: #f8f0e4; }
+table tr td:last-child { white-space: nowrap; }
+
+/* avisos */
+.alert { border-radius: 0; border-width: 2px; }
+.alert-success { background: #e8efd9; border-color: #8aa05a; color: #3c4d1e; }
+.alert-danger { background: #f6dcd5; border-color: #b5584d; color: #7a2820; }
+.text-muted { color: var(--suave); }
